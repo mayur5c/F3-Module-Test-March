@@ -1,12 +1,11 @@
-// api key required
-let api_key = "vPHOqlV7gxIHAa4Y2IfjxBYgmSOy5VT5np6eDmtn";
+let api_key = "CF6c6lTdOqr2oc3b0mrfEZ1uLc5VyFyrD1eMfrys"; 
 
-// current date of the day
+
 const currentDate = new Date().toISOString().split("T")[0];
-// validation for input field of date
+
+
 document.getElementById("search-input").setAttribute('max', `${currentDate}`);
 
-// elements for the img Container
 let currentImgContainer = document.getElementById("current-image-container");
 let title = document.createElement('h1');
 let imgContainer = document.createElement('div');
@@ -15,7 +14,7 @@ let img = document.createElement('img');
 let img_desc = document.createElement('h3');
 let description = document.createElement('p');
 
-// function to get the image of today
+
 function getCurrentImageOfTheDay(){
     fetch(`https://api.nasa.gov/planetary/apod?api_key=${api_key}&date=${currentDate}`)
     .then((res) => {
